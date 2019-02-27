@@ -18,6 +18,7 @@ import { HttpModule } from '@angular/http';
 import { Angular2TokenService } from 'angular2-token';
 
 import { FormService } from './shared/form.service';
+import { QuestionService } from './shared/question.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { FormService } from './shared/form.service';
     ColorPickerModule,
     ChartsModule,
   ],
-  providers: [Angular2TokenService, FormService],
+  providers: [Angular2TokenService, FormService, QuestionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
