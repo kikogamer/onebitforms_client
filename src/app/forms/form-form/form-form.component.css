@@ -13,6 +13,7 @@
 .color-picker{
   height: 22px;
   margin-top: 4px;
+  position: relative;
 }
 .materialize-textarea{
   padding: 0;
