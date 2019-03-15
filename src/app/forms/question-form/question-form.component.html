@@ -24,6 +24,21 @@
           </div>
         </div>
         <div class="row">
+          <div class="col m3">
+            <mz-checkbox-container>
+              <input mz-checkbox
+              type="checkbox"
+              [label]="Required"
+              [filledIn]="true"
+              [attr.id]="question.id"  
+              id="{{ question.id }}"  
+              [(ngModel)]="question.required" 
+              name="required"         
+              >
+            </mz-checkbox-container>
+          </div>
+        </div>
+        <div class="row">
           <div class="col m3" *ngIf="question.id !== undefined">
             <a href="#" class="grey-text" (click)="deleteForm(form)">
               <i mz-icon-mdi [icon]="'delete'" [size]="'24px'">

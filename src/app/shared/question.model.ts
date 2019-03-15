@@ -4,13 +4,15 @@ export class Question {
     id: number;
     title: string;
     kind: string;
+    required: boolean;
     form_id: number;
-    questions_answers: QuestionsAnswer[] = [];
+    questions_answers: QuestionsAnswer[] = [];   
 
     constructor(questionInfo: any) {
-        this.id = questionInfo.id;
+        (questionInfo && questionInfo.id ? this.id = questionInfo.id : this.id = 0);
         this.title = questionInfo.title;
         this.kind = questionInfo.kind;
+        this.required = questionInfo.required;
         this.form_id = questionInfo.form_id;
         this.includeQuestionsAnswers(questionInfo.questions_answers);
     }
