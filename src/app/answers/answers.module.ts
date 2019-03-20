@@ -11,6 +11,9 @@ import { MaterializeModule } from 'ngx-materialize';
 import { AllComponent } from './answer-list/all/all.component';
 import { IndividualComponent } from './answer-list/individual/individual.component';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { AnswerSuccessComponent } from './answer-success/answer-success.component';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -18,7 +21,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     CommonModule,
     CoreFormsModule,
     MaterializeModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    RouterModule
   ],
   declarations: [
     AnswerListComponent,
@@ -28,7 +32,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     GraphTextComponent,
     AnswerNewComponent,
     AllComponent,
-    IndividualComponent
+    IndividualComponent,
+    AnswerSuccessComponent
   ]
 })
 export class AnswersModule { }

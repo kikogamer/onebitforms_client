@@ -13,6 +13,7 @@ import { FormListComponent } from './forms/form-list/form-list.component';
 import { FormEditComponent } from './forms/form-edit/form-edit.component';
 import { AnswerListComponent } from './answers/answer-list/answer-list.component';
 import { AnswerNewComponent } from './answers/answer-new/answer-new.component';
+import { AnswerSuccessComponent } from './answers/answer-success/answer-success.component';
 import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
 
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
     { path: 'forms', component: FormListComponent, canActivate: [Angular2TokenService]},
     { path: 'forms/new', component: FormEditComponent, canActivate: [Angular2TokenService]},
     { path: 'forms/:id', component: FormEditComponent, canActivate: [Angular2TokenService]},
+    { path: 'answers/:id/success', component: AnswerSuccessComponent },
     { path: 'answers/:id/new', component: AnswerNewComponent},
     { path: 'answers/:id', component: AnswerListComponent, canActivate: [Angular2TokenService]},
     { path: '**', component: NotFoundComponent },

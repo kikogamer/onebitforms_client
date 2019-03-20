@@ -49,7 +49,7 @@ export class AnswerNewComponent implements OnInit {
   onSubmit(f) {
     console.log(this.answer);
     this.answerService.createAnswer(this.answer).subscribe(data => {
-      this.toastService.show('Answer send with sucess', 10000, 'green');
+      this.router.navigate(['/answers/'+ data.id +'/success']);
       this.answer = new Answer({form_id: this.form.id});
       for (const question of this.form.questions) {
         this.answer.questions_answers.push(new QuestionsAnswer({question: question}));

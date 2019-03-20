@@ -51,7 +51,7 @@
                     </textarea>
                   </div>                  
                 </div>
-                <div class="red-text" *ngIf="questions_answer.question.required && !questions_answer.value">required answer</div>
+                <div class="red-text" *ngIf="questions_answer.question.required && questions_answer.value == null">required answer</div>
               </div>
             </div>
             <button [disabled]="!a.valid" class="btn right" type="submit" *ngIf="form.enable != false">Send</button>

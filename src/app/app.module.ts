@@ -38,7 +38,7 @@ import { AnswerService } from './shared/answer.service';
     BrowserAnimationsModule,
     MaterializeModule.forRoot(),
     ColorPickerModule,
-    ChartsModule,
+    ChartsModule
   ],
   providers: [Angular2TokenService, FormService, QuestionService, AnswerService],
   bootstrap: [AppComponent]
