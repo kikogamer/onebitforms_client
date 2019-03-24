@@ -20,6 +20,7 @@ import { Angular2TokenService } from 'angular2-token';
 import { FormService } from './shared/form.service';
 import { QuestionService } from './shared/question.service';
 import { AnswerService } from './shared/answer.service';
+import { DragulaModule } from 'ng2-dragula';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AnswerService } from './shared/answer.service';
     BrowserAnimationsModule,
     MaterializeModule.forRoot(),
     ColorPickerModule,
-    ChartsModule
+    ChartsModule,
+    DragulaModule.forRoot()
   ],
   providers: [Angular2TokenService, FormService, QuestionService, AnswerService],
   bootstrap: [AppComponent]

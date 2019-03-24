@@ -6,6 +6,7 @@ export class Question {
     kind: string;
     required: boolean;
     form_id: number;
+    position: number;
     questions_answers: QuestionsAnswer[] = [];   
 
     constructor(questionInfo: any) {
@@ -14,6 +15,7 @@ export class Question {
         this.kind = questionInfo.kind;
         this.required = questionInfo.required;
         this.form_id = questionInfo.form_id;
+        this.position = questionInfo.position;
         this.includeQuestionsAnswers(questionInfo.questions_answers);
     }
 

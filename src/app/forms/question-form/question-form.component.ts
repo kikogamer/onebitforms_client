@@ -3,7 +3,6 @@ import { QuestionService } from '../../shared/question.service';
 import { Question } from '../../shared/question.model';
 import { MzToastService } from 'ngx-materialize';
 
-
 @Component({
   selector: 'app-question-form',
   templateUrl: './question-form.component.html',
@@ -13,7 +12,7 @@ export class QuestionFormComponent implements OnInit {
 
   @Input() question: Question;
   @Input() questions: Question[];
-  @Input() form_id: number;
+  @Input() form_id: number; 
 
   constructor(
     private questionService: QuestionService,
@@ -24,6 +23,7 @@ export class QuestionFormComponent implements OnInit {
   }
 
   onSubmit(f) {
+    
     if (this.question.id) {
       this.questionService.updateQuestion(this.question.id, this.question).subscribe(data => {
         this.toastService.show('Question updated', 8000, 'green');
@@ -31,9 +31,11 @@ export class QuestionFormComponent implements OnInit {
         this.toastService.show('Problem in Question update', 8000, 'red');
       });
     } else {
+      (!this.question.position ? this.question.position = this.questions.length : '');
+
       this.questionService.createQuestion(this.form_id, this.question).subscribe(data => {
         this.questions.push(new Question(data));
-        this.question = new Question({});
+        this.question = new Question({ position: this.questions.length });
       }, error => {
         this.toastService.show('Problem in Question creation', 8000, 'red');
       });
