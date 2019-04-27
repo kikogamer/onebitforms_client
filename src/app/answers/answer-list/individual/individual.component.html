@@ -1,3 +1,21 @@
-<p>
-  individual works!
-</p>
+<ul class="collection">
+  <div *ngFor="let answer of answers; let idx = index">
+    <li class="collection-item">
+        <h4>Answer {{ idx + 1 }}</h4>
+        <ul class="collection">
+            <li class="collection-item" *ngFor="let question_answer of answer.questions_answers; let idx_question = index">
+                <h5>{{ idx_question + 1 }} - {{ question_answer.question.title }}</h5>
+                <div *ngIf="question_answer.question.kind == 'boolean'">
+                  <app-answer-boolean [value]="question_answer.value"></app-answer-boolean>
+                </div>
+                <div *ngIf="question_answer.question.kind == 'short_text' || question_answer.question.kind == 'long_text'">
+                  <app-answer-text [value]="question_answer.value"></app-answer-text>
+                </div>
+                <div *ngIf="question_answer.question.kind == 'integer'">
+                  <app-answer-text [value]="question_answer.value"></app-answer-text>
+                </div>
+            </li>
+        </ul>
+    </li>
+  </div>
+</ul>

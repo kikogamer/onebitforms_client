@@ -13,8 +13,8 @@ import { IndividualComponent } from './answer-list/individual/individual.compone
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { AnswerSuccessComponent } from './answer-success/answer-success.component';
 import { RouterModule } from '@angular/router';
-
-
+import { AnswerBooleanComponent } from './shared/answer-boolean/answer-boolean.component';
+import { AnswerTextComponent } from './shared/answer-text/answer-text.component';
 
 @NgModule({
   imports: [
@@ -33,7 +33,9 @@ import { RouterModule } from '@angular/router';
     AnswerNewComponent,
     AllComponent,
     IndividualComponent,
-    AnswerSuccessComponent
+    AnswerSuccessComponent,
+    AnswerBooleanComponent,
+    AnswerTextComponent
   ]
 })
 export class AnswersModule { }

@@ -5,10 +5,10 @@
         <div class="card-content">
           <mz-tab>
             <mz-tab-item [active]="'true'" [label]="'ALL'">
-              <app-all></app-all>
+              <app-all [questions]="questions"></app-all>
             </mz-tab-item>
             <mz-tab-item [label]="'INDIVIDUAL'">
-              <app-individual></app-individual>
+              <app-individual [answers]="answers"></app-individual>
             </mz-tab-item>
           </mz-tab>
         </div>
