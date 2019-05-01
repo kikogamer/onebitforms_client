@@ -13,7 +13,7 @@ export class IndividualComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.answers)
+    
   }
 
 }

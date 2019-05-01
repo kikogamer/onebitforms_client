@@ -16,8 +16,8 @@ import { AnswerNewComponent } from './answers/answer-new/answer-new.component';
 import { AnswerSuccessComponent } from './answers/answer-success/answer-success.component';
 import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
-
-
+import { ForgotPasswordComponent } from './users/forgot-password/forgot-password.component'
+import { ResetPasswordComponent } from './users/reset-password/reset-password.component'
 
 const appRoutes: Routes = [
     { path: '', pathMatch: 'full', component: HomeComponent },
@@ -30,6 +30,8 @@ const appRoutes: Routes = [
     { path: 'answers/:id/success', component: AnswerSuccessComponent },
     { path: 'answers/:id/new', component: AnswerNewComponent},
     { path: 'answers/:id', component: AnswerListComponent, canActivate: [Angular2TokenService]},
+    { path: 'forgot-password', component: ForgotPasswordComponent },
+    { path: 'reset-password', component: ResetPasswordComponent },
     { path: '**', component: NotFoundComponent },
 ];
 
