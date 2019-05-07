@@ -1,27 +1,52 @@
-# OnebitformsClient
+# OneBitFormsClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You must have docker and docker-compose installed
 
-## Build
+```
+For more information, please see https://docs.docker.com/install/ 
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+You must run [OneBitForms API](https://github.com/kikogamer/onebitforms).
 
-## Running unit tests
+### Installing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Access the project folder in your terminal enter the following
 
-## Running end-to-end tests
+```
+$ docker-compose build
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+$ docker-compose run --rm website npm install
+```
 
-## Further help
+```
+$ docker-compose up
+```
+Open your browser and access localhost:4200 to see the home page
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Built With
+
+* [Angular](https://angular.io/) - The javascript web framework.
+* [Angular2Token](https://github.com/neroniaky/angular-token) - Token based authentication service for Angular with interceptor and multi-user support.
+* [ngx-materialize](https://github.com/sherweb/ngx-materialize) - This library is an Angular wrap around Materialize library, a responsive CSS/JS framework that implements Material Design specifications from Google.
+
+## Authors
+
+* **Ronaldo Carneiro da Silva Filho** - *Initial work* - [kikogamer](https://github.com/kikogamer)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* The bootcamp super full stack team.
